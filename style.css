@@ -329,11 +329,11 @@ p {
 
 
 
-@media  (max-width: 80mm) and (max-height: 200mm)  {
+@media  (max-width: 480px)  {
     #previous { margin-left: 22vw;    }
 
     .quote {
-        font-size: 30px;
+        font-size: 20px;
         padding: 5px 5px;
     }
 
@@ -347,7 +347,7 @@ p {
 
 }
 
-@media (max-width: 80mm) and (max-height: 200mm) {
+@media (max-width: 480px) {
 
     .first-container {
         height: 35vh;
@@ -372,7 +372,7 @@ p {
         padding: 5vh 2vw;
     }
 
-    h2 {  font-size: 15px;  }
+    
     .quote {
         font-size: 20px;
         padding: 5px 5px;
@@ -381,8 +381,8 @@ p {
     p {
         font-size: 5px;
         text-align: center;
-        line-height: .9rem;
-        padding: 2px 8px 10px;
+        line-height: .8rem;
+        padding: 2px 6px 10px;
 
     }
 
