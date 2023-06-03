@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Gaana-clone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
+
+</head>
+
+<body>
+
+    <nav id="myNavbar" class="navbar">
+        <ul class="navUl" >
+            <li class="brand"><img class="brand-img" src="musical-note.png" alt=""><a class="brand" href="https://gaana.com/"> Gaana</a>
+            </li>
+            <li class="navlist"><a href="https://gaana.com/songs"> Home</a></li>
+            <li class="navlist"><a href="#favorites"> Favorites</a></li>
+            <li class="navlist"><a href="https://gaana.com/newrelease">New Songs</a></li>
+            <li class="navlist">
+                <form class="search" role="search">
+                    <input class="form" type="search" placeholder="Search" aria-label="Search"><i
+                        class="fa-duotone fa-magnifying-glass"
+                        style="--fa-primary-color: #c5cedd; --fa-secondary-color: #64676d;"></i>
+                    <button class="btn" type="submit">Search</button>
+                </form>
+            </li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </ul>
+        
+    </nav>
+
+
+    <div class="first-container" id="favorites">
+        <div class="one">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUUExIVFRUVGB0WGBgWFxoaGBoYGBYYFxcVGR4YHiggGRolHRYYITEhJSkrLi4uFx8zODMtNygtLi0BCgoKDg0OGxAQGy0fHyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMgAyAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQMEBQYCB//EAEcQAAEDAgMFBQQHBQQKAwAAAAEAAhEDIQQSMQUTQVFhBiJxgZEjMsHwFEJSobHR4TNyc7LSQ2KS8QcWJTREdIKio7MVJGP/xAAbAQACAwEBAQAAAAAAAAAAAAAAAQIDBAUGB//EADERAAEDAgQDBQgDAQAAAAAAAAEAAhEDIQQSMUFRYfAFE3GBkRQVIjJSocHxI9Hhsf/aAAwDAQACEQMRAD8A9iSJU7TpypKqEyhSNy0cVzVpACUSjKUyhCEJIQhCEIQsX2m7bmhUNKixri05SXSb8QIiyr3drdpAgfR6FzlGtzDnR7/JpUQ8FaHYWoACbTzC9EQsLQ7SbRuXYei2NbERp/f6hPnb+0BIGHpd0wdbHSPf8UjUAMJjCPibeq2aFmMLtjGFvep0g6JiDpJBJ73RdV9tYn+zpsscpmxzCJ+tpPFT2lP2Oodx6rSoWMxHaHHMEmlS4WgzcwLB3Qpl3anHD/h2/wCB/wCaq79vP0URhanL1W6QvOKnbvFNJBp0rWIyuGnPvJp3+kHEzGSj/hf/AFJe00+KPZqnRXpaF5qf9IGI+zR82P8A6k5S7dYk/UoHwDv6k+/YkcPUGy9GQsVhe1mJcY3bPQ/1K8O06pa0hrZIk8vxV7G5xLVlr1BR+cH0Vyua1ZrBmcQAOJ+bqjr9oN375DiTEMEmet+io6u0TWcTmJtIB4DwTy3iRISFSWB4acpMAwQPXyVvtDbpd3actH2uJ8PsoVNKE1DOVvFJw+h8fgoyepVAFWVoGq7dr4/BGJ080Cq3kuK1QEJKZIhMoQhNVoQhH5oQvDO1NYOxVbpUeNZ+sfTl5KIzaVYke2qa/bKd27T/APt4j+LU+97lGpUSs9SoIhdVhzNEq/wNWo45TUeRyl34E+Kk4jFupgufVeGixOd3pHOVG2bUa0d70v8ABPbb2U7ECkxn1ny4gxDYN+vosjKv8oDtFtqECkSwAnZGz+0NNxgV3Aut3ib8hJt8hWxqVB9Zwm9ifXVZranZPChhOFxZc73Q15Euf9ngQtlTwRgAmYAE+AAJ+5aMTDWgtJ81mwtes7O2sBaLjeVW1HvOr3HxJ8R96ar1XwPaOM8Mx+/50V4NnmNFU7TpBkkgmOAEk8gBxPRYaj3pNqNOip3U8ziDfiV3hqbaZzuZnDYOXncDL0mYnhKzlDtHUFWagGXQtAuB8SIjrBWwGYDPTGaBmBGsfaANiY0nogtNL5t0Ne2rICpO1ey6xacUK1NpcM+5YCAxosQ0xDog8p9E1s+m19EVOJH36EeoT1TazagqU2sqEVGwHvBmnaD5QbDnokw3saeRoBaOJHeutlQBjWgm5265rM1/eVHtbo3r7BMsqFuhI81ocLtSo+nGY26ysw94Vjs2p3SPD4qVGsW6KFXCCsQHKZiMYRcuggzMxwM3jqjYGPz1i0CwYZnjDgPnyVfSqtdXpMebF4DhwIkWPRWuEw4ZjX5dDTLv+8A+Gn4LVllxfPJZTWLKIwrxsXt9Y131nlbirxIlSK1ZFvkLEbL7W1GQKo3g56O/VavAbVpVx7N8n7Js70TqUX09QjD4qlW+U34HVTUiRKqoWlIhCEIQlCRKEIXgu3Xk4uv/ABqn/sckw7CSAASToAJJU3HUg7GV5BI3tSw6PPFWGHphjszM7HC4LZJHUQFge8Su/Sojug7eFBwDMz2tnLJiXWA8SJVw/GVm191TDSaNHenLqSDDGAnQxmPWyZdTFN3AvmSTBiYix43mfwWYxTnGoajaxpPO8AgxnAcRknQE9bfAp4ZxOZcb33he8dTn5YnmZiB4XJ008Yt9q9qC3c94VXhxc4Oa3UkTOW4jQToQt/2Vx1HFtzU3jq0m7TyI+K8KrTmLiSTBEuMkExfxWp7OYp2BcysNTBI4Fgs4HnOvkralMOaJ1Cs757qjmNFjfr9r3V1BoGmnFZDHVQ2uHggZcxnKXG4iwHG/HrzUrH9p6bSwucd2aZeXj3Q02DrTMnTwK8t7R9u3vEYdm6ggiobuMHlEAHiFmJNRwytsPz+k6VM03Zjvsm+1mz6bK8tJq5mue7K3LcyYAB0nj+iOye1Kk0aQL3AOPdtAGWxAAve1092qwFZ1alTJJq1GgkzclwuyBYAG0C0A8lF7NbMqUMe2i+0XcRcFoGYkeSscQadwtndltXOBadVfbdwjm1aNFoc6oe+Wji4yYI0AgR4SYXeI2RWymGE272liLxY38V3g8BicVjG1D7Omx7X2PL3QDqXC17RmPNbCq8w92ne9DpbzCpdZoHBVOqlryePX5XmVZjhY5oHAiwm6kYF8ArW4+nSq035njvDVkcDJcW8dI9FQY3s9UpAZDnETAaRA5idf0UWw0QtDHjVUOIBD83mrrszUc+u9zruLXEk6k5mlO7I2Pmio+8aCDA4E8yVeU8E1ry+Idlg+rV2aeEcaecmCIMcjMHlOysxNADCOcdcvV1KSJUikvMKiStJBBBII4hJCF115TVaHZnaurTgVBvG8zZw8+PmtZs3a9GuPZvE8WmzvTj5LzNIDBm9uVlnfh2u0suhQ7SrUoDviH39V63CIWC2Z2pq04a/2jetnDz/MLWbN21Rre64B3Fps78isT6Lmars4fG0q3y2PAqwShIlCpWteLY5sYuuedWp/7Cp+AzPc0AEyb+HFd4jC58VWH/6PP/eV3iNrtwgO7Y2qSMpJIDWie8DF79FynNLqhHNd6k97qWVokwndq1W4anUeWl9V5c1pGjZtzuRMJkYCjWw4c9kHvOJF9ahEkG3NZza/aoYrIwUt2wODqhFzY5iAdINuHBac1muogN/Z5YHEQJg9T1WouLRbVc2lgqJHdFkNPUzrOplefdosFuHANMtcLHqDB+6FYYnECtRa5vKCORFjPou+21MmjSqZS0B7hfk4Agjpb71SbHxFiydbjl1lE5myVbSa2kSwabSZ00Eq/q7TqYjA0aYGrW0Y+zu3S7zIDfkqj2aaVOtmqtFSnTPuA/tHkHI0dJvPLxU3Z1Y08DXytuam7aZuXOMujkGsH3hVeFa6nVpvLmd0irMteJaM0GDrYCDCQ38VZUmzheQP6/1aRuLLcQ+rU/aEbwlwIa0uaIA4xEANEp1+182KbVpwA3I3TQvneA855FZzae2KuKq5nOubNAs1oHCOAuVKwBNfEs7rWi1mi3d0jrc8FW8fCVdRqPPwjQnhA/WmuvJevYXEDI1zGuLTkaOQgmNevjoFE2riGhmVrgXVAZaNQHFxmRp72p5pt2BY9tMOL4DB7jsrjMGBECNbHnwUb6LRZNOk1wDZd7QQ8gxmkm78piZnVLD0xWqBpXIxlU4eg+qBOX+4VJVwraRO7kRqCSQfjpbin27cqxAAaCbmSbcBewRi3y508SoTgsM5hJXcexpKusBtNpMvdEnWOXNW1UA6HUT49Vj6bZK2X0LKwP4OsrsG2K4Lb9BU4shtBwKZSIQu6vOKiSIQuuvKIQhCEJUJEIQQr3ZnaitSgOO8Zyd7w8CtbszbtGtZrod9l1j5c15qhZ6mHY64seS3Ue0atIQfiHP8LMdpdoOZjMQxzngb58Q60Z3RaF3tFjixoacziwS2BYmSMxJsYg8IUPbTW1K9Quvle7zlx19FKp1c/BtzJm59SuE9+V19l9Io0qj6UB0AwbG8Rfr7KsxWFdRkTmDm68CRlJ8ND5easNj440mS4nduseh+1HHqlwLXEw7Qn3eI8P1VNtsinWewAQDHnF/vKgTmsjFM9mZnaCQbAbj11+yvu1m0W1sNDDmaC3ppAP8AMs1syoGuMmJBT+JxLDQhpFzB4OF5M8/JUrqpUmtsQsNV2WoHcgrbA1sz2NeSaTXZnMFxFs8DqB6LV47bWDxDNy3Btoh39o0MabTwA0mOKqaTA7CZsjGuaGtJAgnN3STFy4SDy1TFLJlNjmNogwHTBBOhMHySeGk22U6LHtJz9cv8SV8EKO7BJkk94AweIIvpELnenD1SWnMRYEiPQFPl5L6FKYPu5tQJ08RJEqBjgBUeBNnRfnxKpN1bU/jsywBtylepYJ1TEYTDw4Ne9l9YOUkEW421UaphS17d5iXPMi4adeUkzB08ConZbaTPo1Npe3MwvEF0amwNlIpYinTOYPkjQAAwdQQZ1GngrMMWU353mB+wuTi6datTLKLSSeQ5HUgi40UnHsEnhdVZw7o0+9P0awJnmfjKtsCxrhe/zr4Lkd4ALr0T6RbcXVVg8MTqthjLUG/vfAqCymGax4xY+Cn7QdNIfvfArTgj/MLyubj3zRKrEiVIvQLgKhQhC668ohCEIQhCEqE0i4q1Q25MKLicfFm368FX1KhcZJkpZgptpkrPbRr+3qkfbd95P5pt+KMaqNtKu3fVe9EPdwP2imm1QbAj118P1uvNPu4r6hh6gFNsEaDdWuEx5beZi4nmNFQ1apcS52pMk8SSZ+KuGYF4aSWOAg3LTyKrRgHhpJY6CBBLSBcg6nWRyQzLxSxdKocsg9Qo9OmXEgCbSmirLdPYH5muaXjiCCe9r4a6J7C4KmXsZu6m8OUf9ZJuOl226FTlYzRIgEeNtFoezNQuoua8DWHdRA/FG0alOQQ0SLW+5aCvgWUaZa1pygkmOZBNzzmPvWY2rTYGkxU90x4ycuouLgH1WZnxHNstZzjSSerqj+m+1Y4fUcHKVtLDQ41GuLg8yZEOaTJgpijhWZW9x8kEExYuzWy/9No53VjVwwaA1zK94sRHekG06iMwHKel5mBqVUG1HDSev6UbZ7yCfL4qyZVJUIUWtBIDru7s/ZE63gkSPRTcPSJ4FUVB8S6OHnIGkaKbhK5HvEnwj4q8wOPuCHeUfPx1VThsFLZ72saGPXxKscHhwIWKsGxopOpONx1/i2+z6jXiCLHUcuZHLojaLcoy9bHmFU4KvCs8TiM1OOR+BVfZ9QtxLWm8lcjGthjoUJCEL1a4KoUIQusvKISpHOAuTCrq+0Ps26qJcApNaSbKZXxDW668hr+irK+Jc7oOSYJm51SFRJWhlNrUqRKkUVLZYralFwr1SLd90d6PrH1TJdm+qPL5/FW+Nq+1qT9t34pzDYJrzGZjf3v0C8+95LyF7mlTApgjkrWttknZ9Clnc54q1c7ZJcGFtPJxiLOVptraNGo7DuZVYQ0YcH2xiWMaHjdxAg8enVZ+vsKGlzcRT7oJi6qMFgqTmNLqwDiLgxYzYX/HqEm4TvOAiTtv5rSe0W0w0Qd+O5k7L0vtRXw2ILHsqZsO3E1DUcXS5rnOnu8N25rRl65k1V2thq+Jo4gQajqRZBGXI9jyA4gkgTTgDwKyFMU6TXBmIBD6YzA8TclpB5ENM9dbLjZNPDtLHuxDRmpy4Rdr5jIPK8oZ2e8SAdrXER4cZ34WSZjqJytMi+4NuvwOC9Mxtdhwrg9zYIddj3B4dMgOb7r2kx3tQqftHi8McAKGcZ6WWo21nFwLajWnj7zeH1So+ExmG3ZjEBwNog3EA6cNT6Hmqra2Dw5blfiQ1zM0d0mdMrenj1KlTwb4gmIM6hRqdoU2OBibzv8A1+xOiscZtTD/AEEUWVBvMO6nUBiMzntIrZHAyYLm8BZvFdt20ypjsCTWlrGUMxLu6HN9+SeI/JYjFYdgcctVrh3b6TOojpBny5q0bsvDhxP0gQ0xMA8odY/vW6DnYOBJsTOupG6XvFkTBvO3GP34q57TbQo1KFEUtWPq5mzMZqgLToNRdXmzdtURQotcRn+jV2zIs57nZWERqfisW3Z9AxGJbdrTp9Y+8LcufFcmm1ragbVJgtA4ZwYJsdIMKD8CQyJt4i+uqm3tFjzlLTrz3mf+r0HDOLd29s7sUcj6UEEvylrhliCHOIdm4eSzH0pzdfD0TG4YSR9MJANpJuO7Ltbam391c4jCtAbkqioTYiDY+J1/RUVcHlYSP+j8JsxhqGL+hHqrjC47qtHgq2ZhMjXSbrJ7P2VVdEQBzJWo2bgnU2nNlMwAQdNZtHh6LFhcgxLfFUYp00nAm/BSUJUi9KuGqAFRsVjWtsLn7lEr4wu0sOmp81HojvBdTMvNNpSLpatRzrlc5TyWh2Fgm1qwa893K5xE5ZytJAk6aekqZiNggt3jcrWcZqgiSDlh0CRPyVW54mFpZTe9uYDj9lkoSLY/6tg0myWioW1H5jVGU5IMBv2Y1dNj0WTcENcDom+m5kFw1TKVdELhNQJssntI+2qfvu/EopVRyCZ2o721X9938xTLXrz9RvxHxK9xTPwN8lZ4narmUyG8bDz1VRgQC8Tpx8FNbJBzFscZUfBNpDNNQz4cOfHw8h5JsBpQ8kuCc2nRa0jLZpHOb/JChUaBMmJhT8W+j7oquIkmS28hpyiOEk3+Z4oGgD+1eemSPiZ/zVokCAq3XdKcwWLNNwJuOXTir3ajN9SL5gtuL6gkA/PFVFRlAju1HE8JZboLGdY9VabLNKYNRwaYOSJAMDjImDPrxVLjBzKRuIWfZRkGJBEkyIAAEzM6nSE0KhWk27Uw7WNph3fzgudluGzGp8ZPNUTWUDGaq4GLw2b8RrJHzbRWCHCVTBa4pplQrtryp2I2bSa0O3jspj6pPCSTBtcgcdfBRyyiLtquN4uy2WY5/Z4dCouCsaU9hgTx/FXmz6rRrVHnZVTTRju1CZmJZGlxNzE/muKdS/ug+d9FnqMzK5rlusHtNjYG9ab9fmeivdn7V3pLREATI+78V5pTq3/Z+kfmtX2QxLjUc0h4GSbxFi0aDjqs+HoD2hjhxVeJM03LXJEqRd9cdYILuj7w8VwELorgq82dit1UD4mA4QDHvMc34q2ftpu4aJbvKYZAcDOZr/eFocMoAiRF7FY7eu5pd4eaTgCZKlTqPY3KD0f0tXW28wtDy07wb1jgXOc4iqwicxAAaDENHXTjmHJrMeaCUBoGiKlRz4lKuUJE1FZjamzniq5waSHOJBa2dTMHkbqI/Z9TXI7/AAn8ls0BZ3YZrtVuZ2hUbB3Cxj6dXKW7p0RE7szczMxqkpVMRoaZ86V7CNYngFswlVQwTeK0nth51YFjWvr2O70JI9lzBF7XEFLnrm+7v/Bt6R0WxQkcE07o97u+gLKUMRWDY+jtMmZNI5p5zr8hT8Hjnsb+weX5p9zum0CzhYdFeJEvYR9RT98v+gLJVauJcSXUtZ/svEcpXNN9cAA0ZDYH7KJAAGoE6cfitelUjgm8VH3u/wCgLPYnaNV//D5CAQMrHRedRF1HZisREbr/AMI/pWpQg4JvFA7VeNGD1P5WYGKriTujckn2XE24t0SOxFR9nUna/VpkaW5clp0qicC3ipe+Kn0D1VBQDzY03DkYIM+S0PZJzqNV767zBblbqRJIOYgeHJcIRTwDGmZVdXtWo9uUNA+63lN4cJBBHMJViMNin0zLHFp6aeiFd3B2UBjWRcJoKVsvA7+q2nnazNPeeYaIBNz5KKELQRIhc8RN7rXnsC/KH/SsPlNg7MYPnooeA7IOq74ivSa2i7IXEnKbSCDpF9VPxY/2JR/jn+eqpHZBlM7OxYquLWFwzECSLN0HG6z5ngEzvGi6Ip0XOaMsS3NqeHV/sqLbPZarh6W+D6dWkLF1J0gXgT86wrD/AFFfla52JoMztDgHEgwRPHxVht1tPCbMFOhmqMxJk1HQANDEcCcseRUrtXUwYZhfpVOq87oZchgRDZmTrKXePIHidvwn7PSBdMCA2xJgTO+6zOD7I1KtatSp1abzSDTmB7rszZAafuUHY+xamIr7gQx8Gc8iC3UGFqOw9djXY5+HDmsbSDmB5kiA831Burrs8yniq9LHU4D8rmV2cnZYDh4x+CHVHNzDgPv/AKlTwtN+UjUkyJ1ExbwlYvY/ZR+IZUeK1Njabywl5IEiLzyuk2x2RrYenvQ5lWnxdTMxeL9OvrCusGP9lY7+Kf52LjsBmGFxpfO5yRfQuyuzRw0geilncJdsDEKLaNL4acXc2c0+O3kqJ3ZyoKeHqZmxiHZG62Mxf9Ex2h2JUwdQMqQZEtc2cpHGJvIWtrf7psr+K38VP29Vp4yviMDUgPaA7Du/vbsOczz/AAJ5BIVXA8t/CU3YWnktYmI5ktmPPrVYna3Z6pQqUqVqj6rQ5oYDxkAX4yFbDsFV9016AqkTu5735/dC02Khu1MG18A7ggfvQ63jqsgKLP8A5Gs3Euqtqb3uGmJcXF3dI5CCIKTXvIsdp4puw9KmbiZdGsRYHzN7eSocZhH0nup1GlrmmCDz8rRoQeRUdaDtvhd1i3NNV9UhrZc+M0kaWA4QqBaGHM0FYarMjy3gVyhCFJVoQhCSEIQhCEIQhCEIQhCEoQgJWtJIA1MAeJMJoVk/bdR2FbhSG7trs4MHNMk3MxEu0hJg9s1KdCrQAaWVrukHNaNCDbRdP2WwONPfjeDUFsNmJgOJUCjQe+crHOjXKJhLKPyp96+QZ0EeSn09uVBhThSGupEyMw7zTIdLTNrifMq3Z29rhrW7qiQ0BolpNgI5rLsouMw0mNYExJgSlq0HMIDmubOmYQkabTqFMYio3Q9BW7e1FUVK9QNYDiGhjwAYAAjuibG5UbYO26uEeX0iLiHNddpHCeo4R+ahOwrxMscIE3adOemiPor8ubI7Lzgx66QjI2IUe9fmDpuLhXOxu1VbDNe1rabhUeXuzgm54WIsuds9qcRiWbt7mtp65aYyg3kTxIngqzZ+G3tRrJiZvE6CUYDDbyoKcxM3idBOiBTZmzRdM4ioWd2Tbgp7u0FXd4enDYw7szDFyQZve4UXaO1qlaucQSG1CQZbaC0AAi/SU0cP3WkZi5zi2A0xbkeJ6JuphnhuYscBzIMfMoDADISNV5EE9AQPRWO2O0FbE1GVXlrX0xDXMBBsZB11kq0b29xMXbSLwIFQs73jYxKzuHwrnEd05SQM0EgSY8F3icCGB93Esfk93uxzLhYHokabSAI0TGJqgyHGTqmcTiH1XufUcXOcZJOpPP8AytZNIQpwqyZMpEIQhJCEISQhCEIQhCEIQhCEIQlC6pi4vFxfl1tf/JchCaFpm0nucRiKdN1ODNawtwcHcT5KCym9+HpihJLXOzQYMz3SekKnQhKFpsRWE4ktdcU2AkH62joj0lNYKsMuFdUNg54lxno3XhMLPLunULSCNRzEjzB1QEQr5tOs2niRVdMskAunj7w/ukJ2i1zspdmp+zgVWPBpZYNnA2HgqWrtAlpaGU2B3vZGwXReJMwFDlCIVhsH/eGef8pU/Y+PLq7Ru6TdbtZBsDoZ6KgSoQrzAnuYf/mHLmlWc76WCSRkdYm1nEBUiEIhaTvufQfTdFENaPeADb95rhOp08VH2gPZYj/mB+CpEIRC5QhCSaEIQhCEIQhCEIQhCEIQhCEIQhCEIQhCEIQhCEIQhCVIhCEIQhCEIQhCEIQhCEIQhCEIQhCEIQhCEIQhCEIQhCEIQhCEL//Z"
+                alt="">
+        </div>
+        <div class="two">
+            <h1 class="title">Trending Songs</h1>
+            <button class="playBtn" id="playBtn">Play All</button>
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="second-container">
+        <div class="song-list">
+            <h2>Songs</h2>
+            <h2>Artist</h2>
+            <h2>Duration</h2>
+        </div>
+        <hr>
+        <div class="song-one">
+            <img class="song-img" src="https://c.saavncdn.com/241/Pagol-Punjabi-2019-20190704155556-500x500.jpg" alt="">
+            <h4 class="song-name">Pagol</h4>
+            <h4 class="artist">Deep Jandu</h4>
+            <h4 class="duration">4:00</h4> <i id="0" class="fa-solid fa-play-circle fa-1x fa-icon play" ></i>
+        </div>
+        <hr>
+        <div class="song-two">
+            <img class="song-img" src="https://c.saavncdn.com/916/Murder-2-Hindi-2011-20221211193711-500x500.jpg"
+                alt="">
+            <h4 class="song-name">Aye Khuda</h4>
+            <h4 class="artist">Mithoon, Saim Bhat</h4>
+            <h4 class="duration">6:50</h4> <i id="1" class="fa-solid fa-play-circle fa-1x fa-icon play" ></i>
+        </div>
+        <hr>
+        <div class="song-three">
+            <img class="song-img"
+                src="https://c.saavncdn.com/542/RAAZ-The-Mystery-Continues-Hindi-2008-20190617160418-500x500.jpg"
+                alt="">
+            <h4 class="song-name">Maahi</h4>
+            <h4 class="artist">Sharib Toshi</h4>
+            <h4 class="duration">5:29</h4> <i id="2" class="fa-solid fa-play-circle fa-1x fa-icon play" ></i>
+        </div>
+        <hr>
+        <div class="song-four">
+            <img class="song-img" src="https://i.ytimg.com/vi/ZNsPYmkSPeI/maxresdefault.jpg" alt="">
+            <h4 class="song-name">Bones</h4>
+            <h4 class="artist">Imagine Dragon</h4>
+            <h4 class="duration">3:39</h4> <i id="3" class="fa-solid fa-play-circle fa-1x fa-icon play" ></i>
+        </div>
+        <hr>
+        <div class="song-five">
+            <img class="song-img" src="https://images.hungama.com/c/1/b9f/0df/97434074/97434074_300x300.jpg" alt="">
+            <h4 class="song-name">Unholy</h4>
+            <h4 class="artist">Sam Smith, Kim Petras</h4>
+            <h4 class="duration">2:38</h4> <i id="4" class="fa-solid fa-play-circle fa-1x fa-icon play" ></i>
+        </div>
+        <hr>
+        <div class="song-six">
+            <img class="song-img" src="https://i1.sndcdn.com/avatars-000535674090-r2zl8x-t500x500.jpg" alt="">
+            <h4 class="song-name">Daku</h4>
+            <h4 class="artist">Chani Nattan</h4>
+            <h4 class="duration">2:14 </h4><i id="5" class="fa-solid fa-play-circle fa-1x fa-icon play"></i>
+        </div>
+        <hr>
+    </div>
+    <br>
+
+    <div class="third-container">
+        <h1 class="quote">Bas Bajna Chahiye Gaana</h1>
+        <p>Gaana is the one-stop solution for all your music needs. Gaana offers you free, unlimited access to over 30 million Hindi Songs, Bollywood Music, English MP3 songs, Regional Music & Mirchi Play.</p>
+    </div>
+    <hr>
+    <br>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" value="0">
+        <div class="masterSong">
+           
+            <div class="banner">
+                <img class="banner-img" src="https://media4.giphy.com/media/VnIoecjQ3caw8/giphy.gif?cid=ecf05e47ouor3n4pncoodpbizwurh5xwxnfkcot3l5h6r0ew&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+                    width="30px" alt="" id="gif">
+                <span id="masterSongName">Pagol</span>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-backward fa-2x fa-icon" id="previous"></i>
+                <i class="fa-solid fa-play-circle fa-2x fa-icon" id="masterPlay"></i>
+                <i class="fa-solid fa-forward fa-2x fa-icon" id="next"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://kit.fontawesome.com/67a49b880d.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
+</html>
