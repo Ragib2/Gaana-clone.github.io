@@ -301,7 +301,7 @@ p {
     }
 
     h2 {
-        font-size: 3.5vh;
+        font-size: 30px;
     }
 
     .song-one .song-three .song-two .song-five .song-four {
@@ -320,7 +320,10 @@ p {
     .play {
         left: 92%;
     }
-
+ .quote {
+        font-size: 20px;
+        padding: 5px 5px;
+    }
     #previous {
         margin-left: 26vw;
     }
