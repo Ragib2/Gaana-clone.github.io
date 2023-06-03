@@ -329,7 +329,7 @@ p {
 
 
 
-@media (max-width: 576px) {
+@media (max-width: 420px) {
     #previous { margin-left: 22vw;    }
 
     .quote {
@@ -347,7 +347,7 @@ p {
 
 }
 
-@media (max-width: 576px) {
+@media (max-width: 420px) {
 
     .first-container {
         height: 35vh;
